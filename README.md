@@ -1,24 +1,6 @@
-# README
+Exelate Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-The challenge was to create a webapp that pulls live data from the MTA and allows a user to see the status of multiple forms of transportation. 
 
-Things you may want to cover:
+-The user can create an account and set the lines they normally take as favorites.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
