@@ -7,5 +7,7 @@ Exelate Challenge
 
 Information Source: 'http://mta.info/status/serviceStatus.txt'
 
+Hosted Heroku Site https://stormy-garden-25201.herokuapp.com/
+
 Stack: Ruby on Rails with plain CSS/HTML/JS
 
