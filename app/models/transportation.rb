@@ -6,7 +6,7 @@ class Transportation < ApplicationRecord
 
   attr_reader :url, :data
 
-  def initialize
+  def initializer
     @url = 'http://mta.info/status/serviceStatus.txt'
 
     @doc = Nokogiri::HTML(open(@url))
