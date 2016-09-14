@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 20160909172230) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "transportation_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["transportation_id"], name: "index_favorites_on_transportation_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
+    t.index ["transportation_id"], name: "index_favorites_on_transportation_id", using: :btree
+    t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
   create_table "transportations", force: :cascade do |t|

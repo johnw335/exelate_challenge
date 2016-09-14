@@ -29,8 +29,6 @@ class UsersController < ApplicationController
     else
       @user = User.create!(email: @email, password: @password)
       session[:current_user_id] = @user.id
-      # puts "it should be after this"
-      # puts session[:current_user_id]
       redirect_to transportations_path
     end
 

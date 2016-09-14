@@ -3,31 +3,10 @@ class TransportationsController < ApplicationController
     def index
       @xml_scrape = Transportation.new
 
-      # puts "This is the original scrape"
-      # puts @xml_scrape
-
-      # puts "This is attempt at finding lines"
-      # puts @lines
-      # @print_class_list = @xml_scrape.get_class_items('line')
-      # puts @print_class_list
-
       @timestamp = @xml_scrape.get_timestamp.inner_html
 
 
       @subway_line_names = @xml_scrape.list_subway_lines
-      # puts @subway_line_names
-
-      # @bus_line_names = @xml_scrape.list_bus_lines
-      # puts @bus_line_names
-
-      # @bt_line_names = @xml_scrape.list_bt_lines
-      # puts @bt_line_names
-
-      # @lirr_line_names = @xml_scrape.list_lirr_lines
-      # puts @lirr_line_names
-
-      # @metroNorth_line_names = @xml_scrape.list_metroNorth_lines
-      # puts @metroNorth_line_names
 
       @transportation_list = Transportation.all
       @user = User.find(session[:current_user_id])
