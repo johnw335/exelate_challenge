@@ -1,0 +1,227 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body{
+  background-color: #008b95;
+  font-family: sans-serif;
+  margin: 0;
+}
+ .good_service {
+  background-color: #7df481;
+ }
+
+.ok_service {
+  background-color: #ffd504;
+}
+
+.bad_service {
+  background-color: #ff3333;
+}
+
+.front_page_form{
+  text-align: center;
+}
+
+
+
+#sign_in_block{
+  background-color: #66b9bf;
+  padding-bottom: 5%;
+  color: white;
+  border-radius: 10px;
+  padding-top: 1%;
+  width: 30%;
+  margin-left: 35%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#sign_up_block{
+  background-color: #66b9bf;
+  padding-bottom: 5%;
+  color: white;
+  border-radius: 10px;
+  padding-top: 1%;
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#front_or{
+  text-align: center;
+}
+
+.header {
+    height:65px;
+    background:#e0e1dd;
+    border:1px solid #CCC;
+    width:100%;
+    margin:0px auto;
+    color: #0098a8;
+}
+
+.header_text{
+  font-size: 3em;
+  text-align: center;
+}
+
+
+.logout_div{
+  margin-left: 90%;
+  margin-top: -35px;
+}
+
+#add_lines_text{
+  font-size: 1.05em;
+}
+
+#add_new_fav{
+  display: inline-block;
+  width: 20%;
+  min-width: 108px;
+  background-color: #e37222;
+  /*background-color: #eeaa7a;*/
+  height: 500px;
+  color: white;
+  padding-left: 1%;
+  text-align: left;
+}
+
+#display_fav{
+  display: inline-block;
+  vertical-align: top;
+  width: 78%;
+  margin-left: -5px;
+
+}
+
+.drop_down{
+  color: red;
+}
+
+#timestamp{
+  background-color:#00c2d4;
+  color: #FFFFFE;
+  height: 40px;
+  text-align: left;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 2em;
+  padding-left: 5px;
+}
+
+li{
+  list-style-type: none;
+  height: 40px;
+  padding-top: 2%;
+  padding-left: 2%;
+  margin-bottom: 2px;
+}
+
+.line_list{
+  color: black;
+}
+
+.status{
+  margin-right: 5%;
+  float: right;
+}
+
+#remove_button{
+  float:left;
+  margin-right: 3%;
+}
+
+#choose_method_button{
+  margin-left: 3%;
+  margin-top: -35px;
+  width: 20%;
+  float: left;
+}
+
+#favorite_button{
+  float:left;
+  margin-right: 3%;
+}
+
+
+@media (max-width: 920px) and (min-width: 789px) {
+  .header_text{
+  font-size: 2.2em;
+  text-align: center;
+  }
+}
+
+@media (max-width: 788px) and (min-width: 650px) {
+  .header_text{
+  font-size: 1.8em;
+  text-align: center;
+  }
+}
+
+
+
+@media (max-width: 650px) {
+    #timestamp{
+    background-color:#00c2d4;
+    color: #FFFFFE;
+    height: 40px;
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1.5em;
+    padding-left: 5px;
+  }
+
+  #display_fav{
+  display: inline-block;
+  vertical-align: top;
+  width: 72%;
+  margin-left: -5px;
+
+  }
+  .header_text{
+  font-size: 1.3em;
+  text-align: center;
+  }
+
+  .logout_div{
+  margin-left: 80%;
+  margin-top: 5px;
+  }
+
+  #choose_method_button{
+  margin-left: 3%;
+  margin-top: 1px;
+  width: 20%;
+  font-size: .8em;
+  float: left;
+  }
+
+}
+
+@media (max-width: 520px) {
+    #timestamp{
+    background-color:#00c2d4;
+    color: #FFFFFE;
+    height: 40px;
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1.1em;
+    padding-left: 5px;
+  }
+}

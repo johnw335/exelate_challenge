@@ -1,0 +1,25 @@
+<div class="main_container">
+
+  <div id="sign_in_block">
+    <h1> Sign In</h1>
+    <div class="front_page_form">
+      <%= form_for :user, url: { action: 'login'} do |f| %>
+        <%= f.text_field :email, :placeholder => "Email"%>
+        <%=f.text_field :password, :type => 'password', :placeholder => "Password"%>
+        <%= f.submit 'Login' %>
+      <%end%>
+    </div>
+  </div>
+
+  <h3 id="front_or">or</h3>
+  <div id="sign_up_block">
+    <h1> Create New Account</h1>
+    <div class="front_page_form">
+      <%= form_for :user, url: { action: 'create'} do |f| %>
+        <%= f.text_field :email, :placeholder => "Email"%>
+        <%=f.text_field :password, :type => 'password', :placeholder => "Password"%>
+        <%= f.submit 'Create New Account' %>
+      <%end%>
+    </div>
+  </div>
+</div>

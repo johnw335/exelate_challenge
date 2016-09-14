@@ -1,0 +1,39 @@
+
+<div class="header">
+  <div class="header_text">Favorites List</div>
+  <div class= "logout_div"><%= button_to 'Logout', {:controller => "sessions", :action => "destroy"}%></div>
+</div>
+<div id="add_new_fav">
+  <p id="add_lines_text">
+    Add Lines to Your Favorites
+  </p>
+  <%= form_for :transportation, url: {action: 'display'} do |f| %>
+    <%= f.select :transport_type,  [['Subway','subway'],['Bus','bus'],['BT','bt'],['LIRR','lirr'],['Metro North','metro north']]%>
+    <br>
+    <br>
+    <%= f.submit "Choose Line" %>
+  <% end %>
+</div>
+<div id="display_fav">
+  <div id="timestamp">
+  Updated at: <%=@timestamp%>
+  </div>
+  <%if @full_info_array.length > 0%>
+    <%@full_info_array.each do |i| %>
+      <span class="line_list"><li class=
+        <%if i[1] == "GOOD SERVICE"%>
+            <%='good_service'%>
+        <%elsif i[1] == "SERVICE CHANGE" or i[1] == "PLANNED WORK"%>
+          <%='ok_service'%>
+        <%elsif i[1] == "DELAYS"%>
+          <%='bad_service'%>
+        <%end%>
+      >
+        <span id="remove_button"><%= button_to 'Remove', {:controller => "favorites", :action => "destroy", :name => i[0]} , :method=>:post  %></span><%=i[0]%> <span class="status"><%=i[1]%></span>
+      </li></span>
+    <%end%>
+  <%else%>
+    <h1>Your Favorites List Looks Empty</h1>
+  <%end%>
+</div>
+

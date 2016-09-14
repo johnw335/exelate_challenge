@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="header_text"><%=@transport_type.upcase%> LINES</div>
+  <div id="choose_method_button"><%= link_to "New Travel Method", transportations_path %></div>
+  <div class= "logout_div"><%= button_to 'Logout', {:controller => "sessions", :action => "destroy"}%></div>
+</div>
+<%@zipped_hash.each do |key, value| %>
+  <li class=
+      <%if key.inner_html == "GOOD SERVICE"%>
+          <%='good_service'%>
+      <%elsif key.inner_html == "SERVICE CHANGE" or key.inner_html == "PLANNED WORK"%>
+        <%='ok_service'%>
+      <%elsif key.inner_html == "DELAYS"%>
+        <%='bad_service'%>
+      <%end%>
+  >
+  <span id="favorite_button"><%= button_to 'Add to Favorites', {:controller => "favorites", :action => "create", :name => value.inner_html} , :method=>:post  %></span><%=value.inner_html%><span class="status"><%=key.inner_html%></span></li>
+<%end%>
