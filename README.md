@@ -4,3 +4,7 @@ Exelate Challenge
 
 -The user can create an account and set the lines they normally take as favorites.
 
+Information Source: 'http://mta.info/status/serviceStatus.txt'
+
+Stack: Ruby on Rails with plain CSS/HTML/JS
+
